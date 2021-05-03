@@ -1,0 +1,529 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merriweather', serif; }
+
+body {
+  background-color: #151B27; }
+
+div.gridPrincipal {
+  width: 100%;
+  max-width: 1600px;
+  display: grid;
+  grid-template-rows: 300px 700px 150px 50px;
+  grid-template-columns: 15vw 53vw 32vw;
+  grid-template-areas: "header animacion animacion" "header  main  main" "header  footer footer" "pais   firma firma";
+  background-color: #151B27; }
+
+.headerNav {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "imagen" "nav";
+  margin: 0px 0px 0px 0px;
+  height: 10vh;
+  padding-bottom: 0;
+  grid-area: header;
+  background-color: #28303F;
+  position: sticky;
+  height: 100%; }
+  .headerNav h1 {
+    font-size: 10px; }
+  .headerNav__imagen {
+    grid-area: "imagen";
+    justify-self: center;
+    height: 60%;
+    width: 70%;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 10px;
+    margin-left: 0px; }
+  .headerNav .navHeader {
+    grid-area: "nav";
+    align-self: start;
+    padding-left: 10px;
+    display: block; }
+    .headerNav .navHeader .listaPadre {
+      list-style: none;
+      font-size: 0;
+      display: block;
+      padding-left: 0px; }
+      .headerNav .navHeader .listaPadre__listaNavegador {
+        display: block;
+        font-size: 14px;
+        justify-content: space-between;
+        border: none;
+        padding: 2px;
+        align-items: center;
+        margin-right: 30px; }
+        .headerNav .navHeader .listaPadre__listaNavegador a {
+          text-decoration: none;
+          color: #e8f1f1; }
+      .headerNav .navHeader .listaPadre .ulSubMenu {
+        position: absolute;
+        display: none; }
+        .headerNav .navHeader .listaPadre .ulSubMenu__sublistas {
+          display: block;
+          border: none;
+          cursor: pointer;
+          padding-top: 1px;
+          position: relative; }
+        .headerNav .navHeader .listaPadre .ulSubMenu__linkNav {
+          text-decoration: none;
+          color: #e8f1f1; }
+
+.animacionDescubierta {
+  background-color: #426464;
+  text-align: center;
+  padding-top: 0px;
+  grid-area: animacion; }
+  .animacionDescubierta img {
+    height: 300px; }
+
+/* SECCION CARDS*/
+main {
+  grid-area: main;
+  padding-top: 0px;
+  max-width: 100%;
+  background-color: #151B27; }
+  main .cards {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-gap: 30px;
+    grid-template-areas: "section1 section2" "section3 section4";
+    align-content: space-between;
+    justify-content: space-between;
+    margin: 0px 150px;
+    max-height: 100%; }
+    main .cards__1 {
+      grid-area: "section1";
+      justify-self: center;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+      cursor: pointer; }
+      main .cards__1 h2 {
+        color: crimson;
+        text-align: center; }
+      main .cards__1 img {
+        height: 100%;
+        width: 100%; }
+    main .cards__2 {
+      grid-area: "section2";
+      justify-self: center;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+      cursor: pointer; }
+      main .cards__2 h2 {
+        color: crimson;
+        text-align: center; }
+      main .cards__2 img {
+        height: 100%;
+        width: 100%; }
+    main .cards__3 {
+      grid-area: "section3";
+      justify-self: center;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+      cursor: pointer; }
+      main .cards__3 h2 {
+        color: crimson;
+        text-align: center; }
+      main .cards__3 img {
+        height: 100%;
+        width: 100%; }
+    main .cards__4 {
+      grid-area: "section4";
+      justify-self: center;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      position: relative;
+      cursor: pointer; }
+      main .cards__4 h2 {
+        color: crimson;
+        text-align: center; }
+      main .cards__4 img {
+        height: 100%;
+        width: 100%; }
+
+/* FOOTER */
+.footer {
+  background-color: #151B27;
+  grid-area: footer;
+  flex-direction: column;
+  display: flex;
+  align-self: end;
+  height: 100px; }
+  .footer__titulo {
+    font-size: 20px;
+    color: #e8f1f1;
+    text-align: center; }
+  .footer__ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none; }
+  .footer__link {
+    text-decoration: none;
+    color: #e8f1f1; }
+    .footer__link--activo {
+      color: crimson; }
+
+.pais {
+  grid-area: pais;
+  background-color: #28303F; }
+  .pais__dropdown {
+    background-color: #28303F; }
+
+.firma {
+  align-self: stretch;
+  grid-area: firma;
+  color: azure;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #151B27;
+  background-image: linear-gradient(to bottom, #151B27, #58657e); }
+  .firma__carita {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: azure; }
+
+.gridTorneos {
+  display: grid;
+  grid-template-rows: 300px 300px 100px 50px;
+  grid-template-columns: 14vw 43vw 43vw;
+  grid-template-areas: "header main main " "header  main  main" "header  footer footer" "pais   firma firma";
+  align-content: space-between;
+  justify-content: space-between; }
+  .gridTorneos .torneoPrincipal {
+    grid-area: main;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 30vw 30vw 30vw;
+    grid-template-rows: 46% 22% 22%;
+    grid-template-areas: "torneo1 torneo1 promo" " torneo2  torneo3 promo" "torneo4 torneo5 promo";
+    align-content: space-between;
+    justify-content: space-between; }
+    .gridTorneos .torneoPrincipal .torneo1 {
+      grid-area: torneo1;
+      justify-self: center;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      text-align: center;
+      font-size: 30px;
+      color: #e5eeee;
+      cursor: pointer; }
+      .gridTorneos .torneoPrincipal .torneo1 img {
+        height: 100%;
+        width: 100%;
+        box-shadow: 3px 3px 3px 3px crimson; }
+    .gridTorneos .torneoPrincipal .torneo2 {
+      grid-area: torneo2;
+      padding-top: 10px;
+      max-width: 100%;
+      max-height: 100%;
+      text-align: center;
+      cursor: pointer; }
+      .gridTorneos .torneoPrincipal .torneo2 img {
+        height: 100%;
+        width: 100%;
+        cursor: pointer; }
+    .gridTorneos .torneoPrincipal .torneo3 {
+      grid-area: torneo3;
+      padding-top: 10px;
+      max-width: 100%;
+      max-height: 100%;
+      text-align: center;
+      cursor: pointer; }
+      .gridTorneos .torneoPrincipal .torneo3 img {
+        height: 100%;
+        width: 100%; }
+    .gridTorneos .torneoPrincipal .torneo4 {
+      grid-area: torneo4;
+      padding: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      text-align: center;
+      cursor: pointer; }
+      .gridTorneos .torneoPrincipal .torneo4 img {
+        height: 100%;
+        width: 100%; }
+    .gridTorneos .torneoPrincipal .torneo5 {
+      grid-area: torneo5;
+      padding: 0px;
+      max-width: 100%;
+      max-height: 100%;
+      text-align: center;
+      cursor: pointer; }
+      .gridTorneos .torneoPrincipal .torneo5 img {
+        height: 100%;
+        width: 100%; }
+    .gridTorneos .torneoPrincipal .promo {
+      width: 50%;
+      height: 50%;
+      transition: width 12s, height 12s, margin 12s;
+      margin: 50px auto 0; }
+      .gridTorneos .torneoPrincipal .promo :hover {
+        width: 100%;
+        height: 500px;
+        margin: 0 auto;
+        cursor: pointer; }
+      .gridTorneos .torneoPrincipal .promo img {
+        height: 50%;
+        width: 50%; }
+
+.registro {
+  width: 100%;
+  max-width: 1550px;
+  display: grid;
+  grid-template-rows: 300px 700px 100px 50px;
+  grid-template-columns: 15vw 53vw 32vw;
+  grid-template-areas: "header animacion animacion" "header  main  main" "header  footer footer" "pais   firma firma";
+  color: azure; }
+  .registro .registroDeEquipo {
+    padding: 10px; }
+  .registro .animacionRegistro {
+    grid-area: animacion; }
+    .registro .animacionRegistro img {
+      max-height: 100%;
+      width: 100%; }
+
+.gridNoticias {
+  display: grid;
+  grid-template-rows: 300px 700px 100px 50px;
+  grid-template-columns: 15vw 53vw 32vw;
+  grid-template-areas: "header animacion animacion" "header  main  main" "header  footer footer" "pais   firma firma";
+  justify-items: stretch;
+  align-items: stretch; }
+
+.noticiaAnimacion {
+  grid-area: animacion;
+  justify-self: center;
+  align-self: stretch;
+  padding: 0px;
+  position: relative; }
+  .noticiaAnimacion img {
+    justify-self: stretch;
+    align-self: stretch;
+    width: 100%;
+    max-height: 100%; }
+
+.noticias {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "noticia1 noticia2";
+  justify-items: start;
+  align-items: start;
+  justify-content: space-between;
+  padding-top: 50px; }
+  .noticias .noticias1 {
+    grid-area: noticia1;
+    padding: 0;
+    color: #e8f1f1; }
+    .noticias .noticias1 h2 {
+      text-align: center;
+      color: crimson; }
+    .noticias .noticias1 video {
+      padding-top: 10px; }
+  .noticias .noticias2 {
+    grid-area: noticia2;
+    color: #e8f1f1;
+    padding: 0px; }
+    .noticias .noticias2 h2 {
+      color: crimson;
+      text-align: center; }
+    .noticias .noticias2 img {
+      height: 100%;
+      width: 100%; }
+
+div.tienda {
+  width: 100%;
+  max-width: 1600px;
+  display: grid;
+  grid-template-rows: 300px 700px 150px 50px;
+  grid-template-columns: 15vw 53vw 32vw;
+  grid-template-areas: "header animacion animacion" "header  main  main" "header  footer footer" "pais   firma firma";
+  background-color: #151B27;
+  color: #e8f1f1; }
+  div.tienda .tablaTienda {
+    grid-area: main;
+    align-self: center;
+    justify-self: center;
+    color: #e8f1f1;
+    width: auto; }
+    div.tienda .tablaTienda tr {
+      color: #e8f1f1; }
+
+@media screen and (max-width: 760px) and (min-width: 321px) {
+  div.gridPrincipal {
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 15vh 10vh 40vh 15vh 10vh;
+    grid-gap: 1px;
+    grid-template-areas: "header  animacion" "header animacion" "main   main" "footer footer" " pais  firma";
+    align-content: space-between;
+    height: 1000px; }
+  .headerNav {
+    margin: 0 0 0 0;
+    padding: 20px 0px 0px 10px;
+    grid-area: header;
+    display: flex; }
+  .headerNav__imagen {
+    max-width: 25%;
+    max-height: 50%; }
+  div.animacionDescubierta {
+    grid-area: animacion;
+    padding-top: 00px;
+    align-self: stretch;
+    justify-self: stretch;
+    max-height: 100%;
+    max-width: 100%; }
+    div.animacionDescubierta img {
+      height: 237px; }
+  main .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-gap: 50px;
+    grid-template-areas: "section1 section2" "section3 section4";
+    align-content: space-around;
+    justify-content: space-between;
+    margin: 20px 150px 20px 10px;
+    padding-top: 0px;
+    grid-area: main; }
+  .cards__1 {
+    grid-area: section1; }
+  .cards__1 img {
+    height: 100%;
+    width: 100%; }
+  .cards__2 {
+    grid-area: section2; }
+  .cards__2 img {
+    height: 100%;
+    width: 100%; }
+  .cards__3 {
+    grid-area: section3; }
+  .cards__3 img {
+    height: 100%;
+    width: 100%; }
+  .cards__4 {
+    grid-area: section4; }
+  .cards__4 img {
+    height: 100%;
+    width: 100%; }
+  footer {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    grid-area: footer;
+    align-self: stretch; }
+  .pais {
+    grid-area: pais;
+    max-height: 100%;
+    justify-self: center;
+    align-self: end; }
+  .firma {
+    grid-area: firma;
+    max-height: 100%;
+    justify-self: center;
+    align-self: end; } }
+
+@media only screen and (max-width: 320px) {
+  div.gridPrincipal {
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 20vh 10vh 50vh 30vh;
+    grid-template-areas: "header header" "h1      h1" "main main" "footer footer" "pais    firma";
+    justify-content: space-evenly; }
+  .headerNav {
+    grid-area: header;
+    padding: 0px;
+    margin-bottom: 10px;
+    display: flex; }
+  .navHeader {
+    display: inline-block; }
+  .headerNav img {
+    max-width: 10px;
+    max-height: 10px; }
+  .animacionDescubierta {
+    grid-area: h1;
+    padding-top: 00px;
+    align-self: start;
+    justify-self: start; }
+  .animacionDescubierta img {
+    height: 100px; }
+  main {
+    grid-area: main;
+    padding: 0px;
+    justify-self: stretch;
+    align-self: stretch;
+    height: 100%;
+    width: 100%; }
+  main .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: "card1 card1" "card2 card2" "card3 card3" "card4 card4";
+    grid-gap: 20px;
+    align-content: stretch;
+    justify-content: stretch;
+    margin: 20px 150px 20px 10px;
+    height: 100%; }
+  .cards__1 {
+    grid-area: card1;
+    justify-self: stretch;
+    align-self: stretch;
+    padding: 0; }
+  .cards__2 {
+    grid-area: card2;
+    justify-self: stretch;
+    align-self: stretch;
+    padding: 0; }
+  .cards__3 {
+    grid-area: card3;
+    justify-self: stretch;
+    align-self: stretch;
+    padding: 0; }
+  .cards__4 {
+    grid-area: card4;
+    justify-self: stretch;
+    align-self: stretch;
+    padding: 0; }
+  button {
+    padding-right: 62px; }
+  footer {
+    grid-area: footer; }
+  .footer__titulo {
+    padding-top: 15px;
+    font-size: 20px; }
+  div.pais {
+    grid-area: pais;
+    align-self: end;
+    background-color: none; }
+  div.firma {
+    grid-area: firma;
+    justify-self: start; } }

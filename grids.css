@@ -1,0 +1,858 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+
+    
+}
+
+.gridPrincipal{
+    width: 100%;
+    max-width: 1600px;
+    
+
+    display:grid;
+    grid-template-rows: 300px 700px 150px 50px;
+    grid-template-columns: 15vw 53vw 32vw;
+    grid-template-areas: "header animacion animacion"
+                        "header  main  main"
+                        "header  footer footer"
+                        "pais   firma firma";
+    background-color: #151B27;
+}
+
+
+
+
+body {
+    background-color: #151B27;
+}
+
+/*-----estilo con submenu  -----*/
+
+header {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: "imagen" "nav";
+    margin:0px 0px 0px 0px;
+    height: 10vh;
+    padding-bottom: 0;
+    grid-area: header;
+
+    
+}
+
+#headerNav {
+    background-color: #28303F;
+    position: sticky;
+    height: 100%;
+
+}
+
+header img{ 
+    grid-area: "imagen" ;
+    justify-self: center;
+    height: 60%;
+    width: 70%;
+    text-align: center;
+    border-radius: 50%;
+    padding-top: 10px;
+    margin-left:0px;
+}
+
+#animacionDescubierta{
+    background-color: rgb(66, 100, 100);
+    text-align: center;
+    padding-top: 0px;
+    
+    grid-area: animacion;
+}
+
+img{
+    height: 300px;
+}
+
+div.gridPrincipal header#headerNav nav.navHeader{
+    grid-area: "nav";
+    align-self: start;
+    padding-left: 10px;
+    display: block;
+}
+
+nav.navHeader ul.listaPadre  {
+    list-style: none;
+    font-size: 0;
+    display: block;
+    padding-left: 0px
+    ;
+    
+}
+
+nav.navHeader .listaPadre li.listaNavegador {
+    display:block;
+    font-size: 14px;
+    justify-content: space-between;
+    border: none;
+    padding: 2px;
+    align-items: center;
+    margin-right: 30px;
+    
+}
+
+nav.navHeader .listaPadre li.listaNavegador :hover{
+    background-color: rgb(70, 68, 67);
+    box-shadow: 3px 3px crimson;
+    /*--- La etiqueta box-shadow te permite darle sombra a la etiqueta, y se combina muy bien con el HOVER*/
+}
+
+nav.navHeader ul.listaPadre ul.ulSubMenu {
+    position: absolute;
+    display: none;
+}
+
+nav.navHeader ul.listaPadre li.listaNavegador ul.ulSubMenu li.subListas {
+    display: block;
+    border: none;
+    cursor:pointer;
+    padding-top: 1px;
+    position: relative;
+    
+}
+
+nav.navHeader ul.listaPadre li:hover ul.ulSubMenu {
+    display: inline-block;
+    padding-top: 10px;
+    
+}
+
+li.listaNavegador a.linkNav{
+    text-decoration: none;
+    color:rgb(232, 241, 241)
+}
+
+
+/* SECCION CARDS*/
+
+main{
+    grid-area: main;
+    padding-top: 0px;
+    max-width: 100%;
+    background-color: #151B27;
+
+}
+
+section.cards{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-gap: 30px;
+    grid-template-areas: "section1 section2"
+                        "section3 section4";
+    align-content: space-between;
+    justify-content: space-between;
+    margin: 0px 150px;
+    max-height: 100%; 
+
+
+    
+}
+.card1{
+    grid-area: "section1";
+    justify-self: center;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    cursor:pointer;
+    }
+
+.card1 :hover {
+    box-shadow: 3px 3px 3px 3px black;
+    
+}
+
+.card1 h2{
+    color:crimson;
+    text-align: center;
+}
+
+.card1 img{
+    height: 100%;
+    width: 100%;
+}
+
+.card1 p{
+    flex: 1;}
+
+
+
+/* button{
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+button:hover{
+    background-color: crimson;
+    box-shadow: 3px 3px darkgray; */
+
+
+
+.card2{
+    grid-area: "section2";
+    justify-self: center;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    
+    }
+
+.card2 :hover {
+    box-shadow: 3px 3px 3px 3px black;
+    
+}
+
+
+.card2 h2{
+    cursor: pointer;
+    color:crimson;
+    text-align: center;
+}
+
+.card2 img{
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.card2 p{
+    flex: 1;} 
+
+.card3{
+        grid-area: "section3";
+        justify-self: center;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        padding: 0px;
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        cursor: pointer;
+        }
+
+.card3 :hover {
+        box-shadow: 3px 3px 3px 3px black;
+        
+    }
+
+
+.card3 h2{
+        color:crimson;
+        text-align: center;
+    }
+
+.card3 img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .card4{
+        grid-area: "section4";
+        justify-self: center;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        padding: 10px;
+        max-width: 100%;
+        max-height: 100%;
+        position: relative;
+        cursor: pointer;
+        }
+
+.card4 :hover {
+        box-shadow: 3px 3px 3px 3px black;
+        
+    }
+    
+.card4 h2{
+        color:crimson;
+        text-align: center;
+    }
+
+.card4 img{
+        height: 100%;
+        width: 100%;
+    }
+
+/* NUEVOS TORNEOS DISPONIBLE */
+.gridTorneos{
+    display:grid;
+    grid-template-rows: 300px 300px 300px 100px ;
+    grid-template-columns: 14vw 43vw 43vw;
+    grid-template-areas: "header main       main"
+                        "header  main      main"
+                        "header  main      main"
+                        "header footer    footer";
+}
+
+.torneoPrincipal{
+    grid-area: main;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 30vw 30vw 40vw;
+    grid-template-rows: 46% 22% 22% ;
+    grid-template-areas: "torneo1 torneo1 promo"
+                        " torneo2  torneo3 promo"
+                        "torneo4 torneo5 promo";
+}
+.torneo1{
+    grid-area: torneo1;
+    justify-self: center;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    color:rgb(229, 238, 238);
+    cursor: pointer;
+    
+}
+
+
+
+.torneo1 img{
+    height:100%;
+    width: 100%;
+    box-shadow: 3px 3px 3px 3px crimson;
+}
+
+.torneo2{
+    grid-area: torneo2;
+    padding: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.torneo2 img{
+    height:100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.torneo2 :hover{
+    box-shadow: 2px 2px rgb(190, 158, 165);
+}
+
+.torneo3{
+    grid-area: torneo3;
+    padding: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    text-align: center;
+
+}
+.torneo3 img{
+    height:100%;
+    width: 100%;
+}
+.torneo3 :hover{
+    box-shadow: 2px 2px rgb(190, 158, 165);}
+
+.torneo4{
+    grid-area: torneo4;
+    padding: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    text-align: center;
+
+}
+.torneo4 img{
+    height:100%;
+    width: 100%;
+}
+.torneo4 :hover{
+    box-shadow: 2px 2px rgb(190, 158, 165);}
+
+.torneo5{
+    grid-area: torneo5;
+    padding: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+    text-align: center;
+
+}
+.torneo5 img{
+    height:100%;
+    width: 100%;
+}
+.torneo5 :hover{
+    box-shadow: 2px 2px rgb(190, 158, 165);}
+.promo {
+    grid-area: promo;
+    transition: all 3s;
+}
+
+.promo :hover {
+
+    transform:scale(2,2)
+}
+
+.promo img{
+    height: 100%;
+    width: 50%;
+    
+
+}
+
+
+
+
+
+/* REGISTRA TU EQUIPO */
+
+.registro {
+    display:grid;
+    grid-template-rows: 300px 700px 100px;
+    grid-template-columns: 15vw 53vw 32vw;
+    grid-template-areas: "header animacion animacion"
+                    "header  main      main"
+                    "header  footer    footer";
+}
+
+.registroDeEquipo{
+    
+    display: flex;
+    justify-content: center;
+
+}
+legend{ 
+    padding: 10px 0px 5px 110px;
+    font-size: 20px;
+}
+form{
+    display: inline-block;
+    align-content: center;
+    width:360px;
+    height: auto;
+    border: 3px solid rgb(240, 232, 239);
+    border-radius: 10px;
+    color: rgb(229, 238, 238) ;
+
+}
+form input{
+    text-align: center;
+    border: none;
+    padding: 0px 4px;
+    margin: 3px 10px;
+}
+
+fieldset{
+    border: none;
+    padding: 0px 10px;
+}
+
+textarea{
+    padding: 0px 35px;
+}
+
+
+
+/* NOTICIAS */
+
+
+.gridNoticias{
+    display:grid;
+    grid-template-rows: 300px 700px 150px;
+    grid-template-columns: 15vw 53vw 32vw;
+    grid-template-areas: "header animacion animacion"
+                    "header  main      main"
+                    "header  footer    footer";
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.noticiaAnimacion{
+    grid-area: animacion;
+    justify-self: center;
+    align-self: stretch;
+    padding: 0px;
+    position: relative;
+}
+
+.noticiaAnimacion img{
+    justify-self: stretch;
+    align-self: stretch ;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.noticias{
+    
+    grid-area: main;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "noticia1 noticia2" ;
+    justify-items: start;
+    align-items: start;
+    height: 550px;
+    justify-content: space-between;
+
+
+}
+
+
+.noticias1{
+    grid-area: noticia1;
+    padding: 0;
+    color:rgb(232, 241, 241)
+}
+    
+.noticias1 h2{
+    text-align: center;
+    color:crimson;
+}
+
+.noticias1 video{
+
+    padding: 0px;
+}
+
+
+.noticias2{
+    grid-area:noticia2 ;
+    color: rgb(232, 241, 241);
+    padding: 0px;
+    
+    
+}
+
+.noticias2 h3{
+    font-size:20px;
+    color:crimson;
+    text-align: center;
+
+}
+
+.noticias2 img{ 
+    height: 100%;
+    width: 100%;
+
+
+}
+
+/* TIENDA  */
+
+.tienda {
+    display:grid;
+    grid-template-rows: 300px 700px 100px;
+    grid-template-columns: 15vw 53vw 32vw;
+    grid-template-areas: "header animacion animacion"
+                    "header  main      main"
+                    "header  footer    footer";
+    align-items: start;
+    justify-items: center;
+}
+
+
+table{
+    color:rgb(232, 241, 241) ;
+    width: auto;
+
+}
+
+/* FOOTER */
+
+footer{
+    background-color: #151B27;
+    grid-area: footer;
+    flex-direction: column;
+    display: flex;
+    align-self: end;
+    height: 100px;
+    
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+}
+footer li:hover{
+    background-color: rgb(70, 68, 67);
+    box-shadow: 3px 3px crimson;}
+
+footer h3{ 
+    font-size: 20px;
+    color: rgb(232, 241, 241);
+    text-align: center;
+}
+
+.firma{
+    align-self: end;
+    grid-area: firma;
+    color: azure;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #151B27;
+    background-image: linear-gradient(to bottom,#151B27, #58657e);;
+} 
+
+.pais{
+    grid-area: pais;
+    background-color: #28303F,
+
+}
+.dropdown{
+    background-color: #28303F
+}
+
+
+
+    @media only screen and (max-width: 760px) and (min-width: 321px)
+{ .gridPrincipal {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 15vh 10vh 40vh 15vh 10vh;
+    grid-gap: 1px;
+    grid-template-areas:  "header  animacion"
+                            "header animacion"
+                            "main   main"
+                            "footer footer"
+                            " pais  firma"; 
+    align-content: space-between;
+    height: 1000px;                    }
+
+
+
+    header{ 
+        margin: 0 0 0 0;
+        padding: 20px 0px 0px 10px;
+        grid-area: header;
+        display: flex;
+        }
+    header img{ 
+        max-width: 25%;
+        max-height: 50%;}
+
+
+    #animacionDescubierta{
+        grid-area: animacion;
+        padding-top:00px ;
+        align-self: stretch;
+        justify-self: stretch;
+        max-height: auto;
+        max-width: auto}
+
+    img{
+        height: 265px;
+    }
+
+    section.cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-gap: 30px;
+        grid-template-areas: "section1 section2"
+                                "section3 section4";
+        align-content: space-around;
+        justify-content: space-between;
+        margin: 20px 150px 20px 10px;
+        padding-top: 0px;
+        grid-area: main;
+        
+        }
+        
+    .card1{
+        grid-area: section1;
+        
+    }
+
+    .cards_1 img{
+        height: 100%;
+        width: 100%;
+    }
+    .cards_2{
+        grid-area: section2;
+
+    }
+    .cards_2 img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .cards_3{
+        grid-area: section3;
+
+    }
+    .cards_3 img{
+        height: 100%;
+        width: 100%;
+    }
+    .cards_4{
+        grid-area: section4;
+
+    }
+
+    .cards_4 img{
+        height: 100%;
+        width: 100%;
+    }
+        footer{
+            margin-top: 30px;
+            margin-bottom: 20px;
+            padding-top: 50px;
+            grid-area: footer;
+            align-self:stretch;}
+        
+
+    .pais{
+        grid-area: pais;
+        max-height: 100%;
+        justify-self: center;
+        align-self: end;
+    }
+
+    .firma{grid-area: firma;
+    max-height: 100%;
+    justify-self: center;
+    align-self: end;}
+    
+    }
+            @media only screen and (max-width: 320px)
+{ .gridPrincipal {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20vh 10vh 50vh 30vh;
+    grid-template-areas: "header header"
+                        "h1      h1"
+                        "main main"
+                        "footer footer"
+                        "pais    firma";
+    justify-content: space-evenly;}
+
+
+    header{
+        grid-area: header;
+        padding: 0px;
+        margin-bottom: 10px;
+        display: flex;
+    }
+
+    nav{ display:inline-block}
+
+    header img{ 
+        max-width: 10px;
+        max-height: 10px;}
+
+    #animacionDescubierta{
+        grid-area: h1;
+        padding-top:00px ;
+        align-self: start;
+        justify-self: start;
+        }
+    
+    img{
+        height: 100px;
+    }
+
+    
+
+    main{
+        grid-area: main;
+        padding: 0px;
+        justify-self: stretch;
+        align-self:stretch;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    section.cards{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-areas: "card1 card1"
+                            "card2 card2"
+                            "card3 card3"
+                            "card4 card4";
+        grid-gap:20px;                   
+        align-content:stretch; 
+        justify-content: stretch; 
+        margin: 20px 150px 20px 10px;
+        height: 100%;
+        
+        }
+
+    .card1{
+        grid-area: card1;
+        justify-self: stretch;
+        align-self:stretch;
+        padding: 0;}
+        
+    .card2{
+        grid-area: card2;
+        justify-self: stretch;
+        align-self:stretch;
+        padding: 0;}
+
+    
+    .card3{
+        grid-area: card3;
+        justify-self: stretch;
+        align-self:stretch;
+        padding: 0;}
+
+    .card4{
+        grid-area: card4;
+        justify-self: stretch;
+        align-self:stretch;
+        padding: 0;}
+    
+            
+
+
+
+    button{
+            padding-right: 62px;
+            }
+    footer{
+        grid-area: footer;}
+    
+
+    div.pais{
+        grid-area: pais;
+        align-self: end;
+        background-color: none;}
+
+    div.firma{
+        grid-area: firma;
+        justify-self: start ;
+    }
+    
+
+
+
+
+}
