@@ -451,7 +451,44 @@ div.tienda {
     grid-area: firma;
     max-height: 100%;
     justify-self: center;
-    align-self: end; } }
+    align-self: end; }
+  .gridNoticias {
+    display: inline-block;
+    justify-items: stretch;
+    align-items: stretch; }
+    .gridNoticias header {
+      margin: 0 0 0 0;
+      padding: 20px 0px 10px 30px; }
+  .noticias {
+    display: inline-block;
+    justify-items: center;
+    align-items: center; }
+  #tienda .tienda {
+    display: inline-block;
+    justify-items: stretch;
+    align-items: stretch; }
+    #tienda .tienda header {
+      margin: 0 0 0 0;
+      padding: 20px 0px 10px 30px; }
+  .bodyRegistro {
+    display: inline-block;
+    justify-items: stretch;
+    align-items: stretch; }
+    .bodyRegistro .registro {
+      display: inline-block; }
+    .bodyRegistro header {
+      margin: 0 0 0 0;
+      padding: 20px 0px 10px 30px; }
+  .gridTorneos {
+    display: inline-block;
+    justify-items: stretch;
+    align-items: stretch; }
+    .gridTorneos header {
+      margin: 0 0 0 0;
+      padding: 20px 0px 10px 30px; }
+    .gridTorneos img {
+      height: 100%;
+      width: auto; } }
 
 @media only screen and (max-width: 320px) {
   div.gridPrincipal {
@@ -526,4 +563,46 @@ div.tienda {
     background-color: none; }
   div.firma {
     grid-area: firma;
-    justify-self: start; } }
+    justify-self: start; }
+  .gridNoticias {
+    display: inline-block;
+    justify-items: stretch;
+    align-items: stretch; }
+    .gridNoticias header {
+      margin: 0 0 0 0;
+      padding: 20px 0px 10px 30px; }
+    .gridNoticias .noticiaAnimacion {
+      max-width: 320px; }
+  .noticias {
+    display: inline-block;
+    justify-items: center;
+    align-items: center;
+    max-width: 320px; }
+    .noticias .noticias1 {
+      max-width: 320px; }
+  #tienda .tienda {
+    display: inline-block;
+    justify-items: stretch;
+    align-items: stretch; }
+    #tienda .tienda header {
+      margin: 0 0 0 0;
+      padding: 20px 0px 10px 30px; }
+  .bodyRegistro {
+    display: inline-block;
+    justify-items: stretch;
+    align-items: stretch; }
+    .bodyRegistro .registro {
+      display: inline-block; }
+    .bodyRegistro header {
+      margin: 0 0 0 0;
+      padding: 20px 0px 10px 30px; }
+  .gridTorneos {
+    display: inline-block;
+    justify-items: stretch;
+    align-items: stretch; }
+    .gridTorneos header {
+      margin: 0 0 0 0;
+      padding: 20px 0px 10px 30px; }
+    .gridTorneos img {
+      height: 100%;
+      width: auto; } }

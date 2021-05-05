@@ -643,9 +643,63 @@ main{
             align-self: end;}
             
             
+//NOTICIAS
+    .gridNoticias{
+        display:inline-block;
+      
+        justify-items: stretch;
+        align-items: stretch;  
+
+    header{ margin: 0 0 0 0;
+        padding: 20px 0px 10px 30px;}}
+
+    .noticias{ display: inline-block;
+                justify-items: center;
+                align-items: center;}
+
+    
+
+//TIENDA
+#tienda{
+.tienda{
+    display:inline-block;
+  
+    justify-items: stretch;
+    align-items: stretch;  
+
+header{ margin: 0 0 0 0;
+    padding: 20px 0px 10px 30px;}}}
+
+//REGISTRA TU EQUIPO
+    .bodyRegistro{
+        display:inline-block;
+                justify-items: stretch;
+                align-items: stretch;
+        .registro{
+                display:inline-block;
+        }
+        header{ margin: 0 0 0 0;
+                padding: 20px 0px 10px 30px;}
 
     }
 
+// NUEVOS TORNEOS
+    .gridTorneos{
+        display:inline-block;
+        justify-items: stretch;
+        align-items: stretch;
+            header{ margin: 0 0 0 0;
+                padding: 20px 0px 10px 30px;}
+            
+            img{ 
+                height: 100%;
+                width: auto;
+            }
+
+    }
+
+
+    }
 
     @media only screen and (max-width: 320px)
     { div.gridPrincipal {
@@ -767,7 +821,70 @@ main{
         }
         
     
-    
+
+//NOTICIAS
+.gridNoticias{
+    display:inline-block;
+
+    justify-items: stretch;
+    align-items: stretch;  
+
+header{ margin: 0 0 0 0;
+    padding: 20px 0px 10px 30px;}
+
+    .noticiaAnimacion{
+        max-width: 320px;
+    }}
+
+.noticias{ display: inline-block;
+            justify-items: center;
+            align-items: center;
+            max-width: 320px;
+        .noticias1{
+            max-width: 320px;
+        }}
+
+
+
+//TIENDA
+#tienda{
+.tienda{
+display:inline-block;
+
+justify-items: stretch;
+align-items: stretch;  
+
+header{ margin: 0 0 0 0;
+padding: 20px 0px 10px 30px;}}}
+
+//REGISTRA TU EQUIPO
+.bodyRegistro{
+    display:inline-block;
+            justify-items: stretch;
+            align-items: stretch;
+    .registro{
+            display:inline-block;
+    }
+    header{ margin: 0 0 0 0;
+            padding: 20px 0px 10px 30px;}
+
+}
+
+// NUEVOS TORNEOS
+.gridTorneos{
+    display:inline-block;
+    justify-items: stretch;
+    align-items: stretch;
+        header{ margin: 0 0 0 0;
+            padding: 20px 0px 10px 30px;}
+        
+        img{ 
+            height: 100%;
+            width: auto;
+        }
+
+}
+
     
     
     }
