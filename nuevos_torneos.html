@@ -5,41 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Noticias de los videojuegos en tendencias, y los torneos proximos a transmitir">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="fonts/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
     <link href="estilo.css" rel="stylesheet">
     <title>Electronics Sports </title>
 </head>
 <body>
     <div class="gridTorneos">
         <header class="headerNav">
-        <img class="headerNav__imagen" src="imagenHeaderProyecto.jpg_1902800913.jpg" alt="imagenApertura" >
-        <nav class="navHeader">
-            <ul class="listaPadre">
-                <li class="listaPadre__listaNavegador">
-                    <a class="linkNav" href="Index.html">Inicio</a>
-                </li>
-                <li class="listaPadre__listaNavegador" >
-                    <a class="linkNav" href="nuevos_torneos.html">Nuevos torneos disponibles</a>
-                    <ul class="ulSubMenu">
-                        <li class="ulSubMenu__subListas"> <a class="ulSubMenu__linkNav" href="nuevos_torneos.html#nuevosTorneos"> Nuevos torneos</a></li>
-                        <li class="ulSubMenu__subListas"> <a class="ulSubMenu__linkNav" href="nuevos_torneos.html#torneosMasJugados"> Torneos mas jugados</a></li>
-                    </ul>
-                </li>
-                <li class="listaPadre__listaNavegador">
-                    <a class="linkNav" href="registraTuEquipo.html">Registra tu equipo</a>
-                </li>
-                <li class="listaPadre__listaNavegador">
-                    <a class="linkNav" href="noticias.html">Noticias</a>
-                </li>
-                <li class="listaPadre__listaNavegador">
-                    <a class="linkNav" href="tienda.html">Tienda</a>
-                </li>
-            </ul>
-
-        </nav>
-        
-    </header>
+            <img class="headerNav__imagen" src="imagenHeaderProyecto.jpg_1902800913.jpg" alt="imagenApertura" >
+            <nav class="navHeader">
+                <ul class="listaPadre">
+                    <li class="listaPadre__listaNavegador"> 
+                        <a class="linkNav" href="index.html"> <span class="icon-keyboard"></span>   Inicio</a>
+                    </li>
+                    <li class="listaPadre__listaNavegador" >
+                        <a class="linkNav" href="nuevos_torneos.html"><span class="icon-gamepad1"></span>   Nuevos torneos disponibles</a>
+                        <ul class="ulSubMenu">
+                            <li class="ulSubMenu__subListas"> <a class="ulSubMenu__linkNav" href="nuevos_torneos.html#nuevosTorneos"> Nuevos torneos</a></li>
+                            <li class="ulSubMenu__subListas"> <a class="ulSubMenu__linkNav" href="nuevos_torneos.html#torneosMasJugados"> Torneos mas jugados</a></li>
+                        </ul>
+                    </li>
+                    <li class="listaPadre__listaNavegador">
+                        <a class="linkNav" href="registraTuEquipo.html"><span class="icon-gamepad"></span>   Registra tu equipo</a>
+                    </li>
+                    <li class="listaPadre__listaNavegador">
+                        <a class="linkNav" href="noticias.html"><span class="icon-radio"></span>   Noticias</a>
+                    </li>
+                    <li class="listaPadre__listaNavegador">
+                        <a class="linkNav" href="tienda.html"><span class="icon-cart"></span>   Tienda</a>
+                    </li>
+                </ul>
+    
+            </nav>
+        </header>
 
 
     
@@ -66,8 +67,12 @@
 
         </div>
 
-        <aside class="promo">
+        <aside class="shake-opacity">
             <img id="promo" src="imagenParaPromo.jpg" alt="promociones">
+        </aside>
+
+        <aside class="shake-slow">
+            <img id="promo" src="promoVideo.png" alt="promociones">
         </aside>
 
     </main>

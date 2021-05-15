@@ -11,7 +11,7 @@ div.gridPrincipal {
   width: 100%;
   max-width: 1600px;
   display: grid;
-  grid-template-rows: 300px 700px 150px 50px;
+  grid-template-rows: 300px 300px 250px 50px;
   grid-template-columns: 15vw 53vw 32vw;
   grid-template-areas: "header animacion animacion" "header  main  main" "header  footer footer" "pais   firma firma";
   background-color: #151B27; }
@@ -89,7 +89,7 @@ main {
   main .cards {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
     grid-gap: 30px;
     grid-template-areas: "section1 section2" "section3 section4";
     align-content: space-between;
@@ -106,6 +106,8 @@ main {
       max-width: 100%;
       max-height: 100%;
       position: relative;
+      margin-top: 20px;
+      margin-bottom: 20px;
       cursor: pointer; }
       main .cards__1 h2 {
         color: crimson;
@@ -113,6 +115,8 @@ main {
       main .cards__1 img {
         height: 100%;
         width: 100%; }
+      main .cards__1 :hover {
+        box-shadow: 3px 3px 3px 3px black; }
     main .cards__2 {
       grid-area: "section2";
       justify-self: center;
@@ -123,13 +127,17 @@ main {
       max-width: 100%;
       max-height: 100%;
       position: relative;
-      cursor: pointer; }
+      cursor: pointer;
+      margin-top: 20px;
+      margin-bottom: 20px; }
       main .cards__2 h2 {
         color: crimson;
         text-align: center; }
       main .cards__2 img {
         height: 100%;
         width: 100%; }
+      main .cards__2 :hover {
+        box-shadow: 3px 3px 3px 3px black; }
     main .cards__3 {
       grid-area: "section3";
       justify-self: center;
@@ -140,6 +148,7 @@ main {
       max-width: 100%;
       max-height: 100%;
       position: relative;
+      margin-top: 20px;
       cursor: pointer; }
       main .cards__3 h2 {
         color: crimson;
@@ -147,6 +156,8 @@ main {
       main .cards__3 img {
         height: 100%;
         width: 100%; }
+      main .cards__3 :hover {
+        box-shadow: 3px 3px 3px 3px black; }
     main .cards__4 {
       grid-area: "section4";
       justify-self: center;
@@ -157,6 +168,7 @@ main {
       max-width: 100%;
       max-height: 100%;
       position: relative;
+      margin-top: 20px;
       cursor: pointer; }
       main .cards__4 h2 {
         color: crimson;
@@ -164,10 +176,12 @@ main {
       main .cards__4 img {
         height: 100%;
         width: 100%; }
+      main .cards__4 :hover {
+        box-shadow: 3px 3px 3px 3px black; }
 
 /* FOOTER */
 .footer {
-  background-color: #151B27;
+  background-color: #272640;
   grid-area: footer;
   flex-direction: column;
   display: flex;
@@ -182,6 +196,11 @@ main {
     flex-direction: row;
     justify-content: space-evenly;
     list-style: none; }
+    .footer__ul :hover {
+      background-color: #464443;
+      box-shadow: 3px 3px crimson;
+      text-decoration: none;
+      color: #e8f1f1; }
   .footer__link {
     text-decoration: none;
     color: #e8f1f1; }
@@ -201,8 +220,7 @@ main {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #151B27;
-  background-image: linear-gradient(to bottom, #151B27, #58657e); }
+  background-color: #272640; }
   .firma__carita {
     height: 100%;
     width: 100%;
@@ -211,7 +229,7 @@ main {
 
 .gridTorneos {
   display: grid;
-  grid-template-rows: 300px 300px 100px 50px;
+  grid-template-rows: 300px 800px 100px 50px;
   grid-template-columns: 14vw 43vw 43vw;
   grid-template-areas: "header main main " "header  main  main" "header  footer footer" "pais   firma firma";
   align-content: space-between;
@@ -222,7 +240,7 @@ main {
     grid-gap: 10px;
     grid-template-columns: 30vw 30vw 30vw;
     grid-template-rows: 46% 22% 22%;
-    grid-template-areas: "torneo1 torneo1 promo" " torneo2  torneo3 promo" "torneo4 torneo5 promo";
+    grid-template-areas: "torneo1 torneo1 promo1" " torneo2  torneo3 promo2" "torneo4 torneo5 promo3";
     align-content: space-between;
     justify-content: space-between; }
     .gridTorneos .torneoPrincipal .torneo1 {
@@ -237,7 +255,8 @@ main {
       text-align: center;
       font-size: 30px;
       color: #e5eeee;
-      cursor: pointer; }
+      cursor: pointer;
+      margin-left: 20px; }
       .gridTorneos .torneoPrincipal .torneo1 img {
         height: 100%;
         width: 100%;
@@ -248,7 +267,10 @@ main {
       max-width: 100%;
       max-height: 100%;
       text-align: center;
-      cursor: pointer; }
+      cursor: pointer;
+      margin-left: 20px; }
+      .gridTorneos .torneoPrincipal .torneo2 :hover {
+        box-shadow: 2px 2px #be9ea5; }
       .gridTorneos .torneoPrincipal .torneo2 img {
         height: 100%;
         width: 100%;
@@ -259,7 +281,10 @@ main {
       max-width: 100%;
       max-height: 100%;
       text-align: center;
-      cursor: pointer; }
+      cursor: pointer;
+      margin-left: 20px; }
+      .gridTorneos .torneoPrincipal .torneo3 :hover {
+        box-shadow: 2px 2px #be9ea5; }
       .gridTorneos .torneoPrincipal .torneo3 img {
         height: 100%;
         width: 100%; }
@@ -268,8 +293,12 @@ main {
       padding: 0px;
       max-width: 100%;
       max-height: 100%;
+      margin-bottom: 30px;
       text-align: center;
-      cursor: pointer; }
+      cursor: pointer;
+      margin-left: 20px; }
+      .gridTorneos .torneoPrincipal .torneo4 :hover {
+        box-shadow: 2px 2px #be9ea5; }
       .gridTorneos .torneoPrincipal .torneo4 img {
         height: 100%;
         width: 100%; }
@@ -279,22 +308,23 @@ main {
       max-width: 100%;
       max-height: 100%;
       text-align: center;
-      cursor: pointer; }
+      cursor: pointer;
+      margin-bottom: 30px;
+      margin-left: 20px; }
+      .gridTorneos .torneoPrincipal .torneo5 :hover {
+        box-shadow: 2px 2px #be9ea5; }
       .gridTorneos .torneoPrincipal .torneo5 img {
         height: 100%;
         width: 100%; }
-    .gridTorneos .torneoPrincipal .promo {
-      width: 50%;
-      height: 50%;
-      transition: width 12s, height 12s, margin 12s;
-      margin: 50px auto 0; }
-      .gridTorneos .torneoPrincipal .promo :hover {
-        width: 100%;
-        height: 500px;
-        margin: 0 auto;
-        cursor: pointer; }
-      .gridTorneos .torneoPrincipal .promo img {
-        height: 50%;
+    .gridTorneos .torneoPrincipal .shake-opacity {
+      grid-area: promo1; }
+      .gridTorneos .torneoPrincipal .shake-opacity img {
+        height: 100%;
+        width: 50%; }
+    .gridTorneos .torneoPrincipal .shake-slow {
+      grid-area: promo2; }
+      .gridTorneos .torneoPrincipal .shake-slow img {
+        height: 100%;
         width: 50%; }
 
 .registro {
@@ -383,11 +413,10 @@ div.tienda {
 @media screen and (max-width: 760px) and (min-width: 321px) {
   div.gridPrincipal {
     grid-template-columns: 50vw 50vw;
-    grid-template-rows: 15vh 10vh 40vh 15vh 10vh;
+    grid-template-rows: 30% 50% 15% 5%;
     grid-gap: 1px;
-    grid-template-areas: "header  animacion" "header animacion" "main   main" "footer footer" " pais  firma";
-    align-content: space-between;
-    height: 1000px; }
+    grid-template-areas: "header animacion" "main   main" "footer footer" " pais  firma";
+    align-content: space-between; }
   .headerNav {
     margin: 0 0 0 0;
     padding: 20px 0px 0px 10px;
@@ -408,50 +437,58 @@ div.tienda {
   main .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
     grid-gap: 50px;
     grid-template-areas: "section1 section2" "section3 section4";
     align-content: space-around;
     justify-content: space-between;
-    margin: 20px 150px 20px 10px;
-    padding-top: 0px;
+    margin: 10px 150px 20px 10px;
+    padding-bottom: 50px;
     grid-area: main; }
-  .cards__1 {
-    grid-area: section1; }
-  .cards__1 img {
+  main .cards__1 {
+    grid-area: section1;
+    margin-bottom: 0px; }
+  main .cards__1 img {
     height: 100%;
     width: 100%; }
-  .cards__2 {
-    grid-area: section2; }
-  .cards__2 img {
+  main .cards__2 {
+    grid-area: section2;
+    margin-bottom: 0px; }
+  main .cards__2 img {
     height: 100%;
     width: 100%; }
-  .cards__3 {
-    grid-area: section3; }
-  .cards__3 img {
+  main .cards__3 {
+    grid-area: section3;
+    margin-bottom: 0px;
+    margin-top: 0px; }
+  main .cards__3 img {
     height: 100%;
     width: 100%; }
-  .cards__4 {
-    grid-area: section4; }
-  .cards__4 img {
+  main .cards__4 {
+    grid-area: section4;
+    margin-bottom: 0px;
+    margin-top: 0px; }
+  main .cards__4 img {
     height: 100%;
     width: 100%; }
   footer {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    padding-top: 50px;
+    margin: 0px;
+    padding: 0px;
     grid-area: footer;
-    align-self: stretch; }
+    align-self: stretch;
+    background-color: #272640; }
   .pais {
     grid-area: pais;
     max-height: 100%;
     justify-self: center;
-    align-self: end; }
+    align-self: end;
+    background-color: #272640; }
   .firma {
     grid-area: firma;
     max-height: 100%;
     justify-self: center;
-    align-self: end; }
+    align-self: end;
+    background-color: #272640; }
   .gridNoticias {
     display: inline-block;
     justify-items: stretch;
@@ -553,17 +590,20 @@ div.tienda {
   button {
     padding-right: 62px; }
   footer {
-    grid-area: footer; }
+    grid-area: footer;
+    background-color: #272640; }
   .footer__titulo {
     padding-top: 15px;
     font-size: 20px; }
   div.pais {
     grid-area: pais;
     align-self: end;
-    background-color: none; }
+    background-color: none;
+    background-color: #272640; }
   div.firma {
     grid-area: firma;
-    justify-self: start; }
+    justify-self: start;
+    background-color: #272640; }
   .gridNoticias {
     display: inline-block;
     justify-items: stretch;
