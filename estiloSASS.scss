@@ -668,14 +668,14 @@ div.tienda {
 
 
     div.gridPrincipal {
-        grid-template-columns: 50vw 50vw;
-        grid-template-rows: 30% 50% 15% 5%;
-        grid-gap: 1px;
-        grid-template-areas:
-            "header animacion"
-            "main   main"
-            "footer footer"
-            " pais  firma";
+        display: inline-block; // grid-template-columns: 50vw 50vw;
+        // grid-template-rows: 30% 50% 15% 5%;
+        // grid-gap: 1px;
+        // grid-template-areas:
+        //     "header animacion"
+        //     "main   main"
+        //     "footer footer"
+        //     " pais  firma";
         align-content: space-between;
         // height: 1000px;     
     }
@@ -683,7 +683,7 @@ div.tienda {
 
 
     .headerNav {
-        margin: 0 0 0 0;
+        margin: 0px 0px 10px 0px;
         padding: 20px 0px 0px 10px;
         grid-area: header;
         display: flex;
@@ -713,7 +713,7 @@ div.tienda {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 50% 50%;
-            grid-gap: 50px;
+            grid-gap: 0px;
             grid-template-areas: "section1 section2"
                 "section3 section4";
             align-content: space-around;
